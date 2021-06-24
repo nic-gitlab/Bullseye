@@ -13,6 +13,7 @@
 		06D5B096268511190021A0CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D5B095268511190021A0CA /* Preview Assets.xcassets */; };
 		06D5B0A12685111B0021A0CA /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5B0A02685111B0021A0CA /* BullseyeTests.swift */; };
 		06D5B0AC2685111B0021A0CA /* BullseyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5B0AB2685111B0021A0CA /* BullseyeUITests.swift */; };
+		06D5B0BD268513E80021A0CA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D5B0BC268513E80021A0CA /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		06D5B0A72685111B0021A0CA /* BullseyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullseyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D5B0AB2685111B0021A0CA /* BullseyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeUITests.swift; sourceTree = "<group>"; };
 		06D5B0AD2685111B0021A0CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D5B0BC268513E80021A0CA /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +97,9 @@
 		06D5B08D2685110E0021A0CA /* Bullseye */ = {
 			isa = PBXGroup;
 			children = (
-				06D5B08E2685110E0021A0CA /* BullseyeApp.swift */,
-				06D5B0902685110E0021A0CA /* ContentView.swift */,
-				06D5B092268511190021A0CA /* Assets.xcassets */,
-				06D5B097268511190021A0CA /* Info.plist */,
+				06D5B0BB268511CC0021A0CA /* Models */,
+				06D5B0BA268511560021A0CA /* Views */,
+				06D5B0B92685113E0021A0CA /* App */,
 				06D5B094268511190021A0CA /* Preview Content */,
 			);
 			path = Bullseye;
@@ -128,6 +129,32 @@
 				06D5B0AD2685111B0021A0CA /* Info.plist */,
 			);
 			path = BullseyeUITests;
+			sourceTree = "<group>";
+		};
+		06D5B0B92685113E0021A0CA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				06D5B08E2685110E0021A0CA /* BullseyeApp.swift */,
+				06D5B092268511190021A0CA /* Assets.xcassets */,
+				06D5B097268511190021A0CA /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		06D5B0BA268511560021A0CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06D5B0902685110E0021A0CA /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06D5B0BB268511CC0021A0CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				06D5B0BC268513E80021A0CA /* Game.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06D5B0912685110E0021A0CA /* ContentView.swift in Sources */,
+				06D5B0BD268513E80021A0CA /* Game.swift in Sources */,
 				06D5B08F2685110E0021A0CA /* BullseyeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,13 +449,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
 				DEVELOPMENT_TEAM = 2HLS5U5V62;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Bullseye/Info.plist;
+				INFOPLIST_FILE = Bullseye/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.Bullseye;
+				PRODUCT_BUNDLE_IDENTIFIER = one.Nicmac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -443,13 +471,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
 				DEVELOPMENT_TEAM = 2HLS5U5V62;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Bullseye/Info.plist;
+				INFOPLIST_FILE = Bullseye/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.Bullseye;
+				PRODUCT_BUNDLE_IDENTIFIER = one.Nicmac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
