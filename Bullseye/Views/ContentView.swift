@@ -13,8 +13,10 @@ struct ContentView: View {
     @State private var game = Game()
     
     var body: some View {
+        ZStack {
+            Color("BackgroundColor")
         VStack {
-            Text("🎯🎯🎯\nPUT THE BULLSEYE AS CLOSE AS YOU CAN TO")
+            Text("🎯🎯🎯\n put the bullseye as close as you can to".uppercased())
                 .bold()
                 .kerning(2.0)
                 .multilineTextAlignment(.center)
@@ -33,27 +35,39 @@ struct ContentView: View {
                 Text("100")
                 .bold()
             }
+            .padding()
             Button(action: {
                 alertIsVisible = true
             }) {
-                Text("Hit me")
+                Text("Hit me".uppercased())
+                    .bold()
+                    .font(.title3)
+                    
             }
-            .alert(isPresented:$alertIsVisible,
-                   content: {
-                    let roundedSliderValue = Int(sliderValue.rounded())
-                    return Alert(title: Text("Hello there"), message: Text("The sliders value is \(roundedSliderValue).\n" + "You scored \(game.points(sliderValue: roundedSliderValue)) points this round."), dismissButton: .default(Text("Awesome!")))
-            })
+                .padding(20.0)
+                .background(
+                    ZStack {
+                        Color("ButtonColor")
+                        LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
+                    }
+                )
+                .foregroundColor(Color.white)
+                .cornerRadius(21.0)
+                .alert(isPresented:$alertIsVisible,
+                       content: {
+                        let roundedSliderValue = Int(sliderValue.rounded())
+                        return Alert(title: Text("Hello there"), message: Text("The sliders value is \(roundedSliderValue).\n" + "You scored \(game.points(sliderValue: roundedSliderValue)) points this round."), dismissButton: .default(Text("Awesome!")))
+                })
            
             
+            }
         }
-        
-        
-        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
